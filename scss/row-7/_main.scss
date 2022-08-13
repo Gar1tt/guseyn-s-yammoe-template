@@ -1,0 +1,111 @@
+main {
+    width: 70%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid $borderColor;
+
+    .col {
+        width: 23%;
+
+        h4 {
+            color: #fff;
+            font-family: $headingsFont;
+            font-weight: 400;
+        }
+
+    }
+    @media (max-width: 992px){
+        flex-direction: column;
+
+        .col{
+            width: 100%;
+        }
+    }
+
+    .col:nth-child(1) {
+        p {
+            color: #A8A8A8;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                display: inline-block;
+                padding: 5px 8px;
+                color: rgba(255, 255, 255, 0.623);
+                background: rgba(255, 255, 255, .2);
+            }
+        }
+    }
+
+    .col:nth-child(2) {
+        ul {
+            padding: 0;
+            list-style: none;
+
+            li {
+                padding: 20px 0px;
+                border-bottom: 1px solid $borderColor;
+
+                a {
+                    color: $mainColor;
+                    text-decoration: none;
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+        }
+    }
+
+    .col:nth-child(3) {
+        p {
+            color: $borderColor
+        }
+
+        form {
+            input {
+                margin-bottom: 15px;
+                width: 100%;
+                border-radius: 15px;
+                font-size: 15px;
+                padding: 12px;
+                border: none;
+                color: #fff;
+                background: rgba(226, 220, 220, 0.219);
+                transition: 400ms;
+
+                &:focus {
+                    background: $mainColor;
+                    outline: none;
+                }
+            }
+
+            button {
+                @include mainButton;
+            }
+        }
+    }
+
+    .col:nth-child(4) {
+        .images {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+
+            .image-container {
+                width: 31%;
+                margin-bottom: 5px;
+                @include plusContainer;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

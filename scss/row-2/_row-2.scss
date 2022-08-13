@@ -1,0 +1,65 @@
+.row-2 {
+    padding: 100px 0px;
+
+    header {
+        width: 85%;
+        margin: auto;
+        padding: 50px 0;
+
+        h1 {
+            font-weight: 400;
+            font-size: 40px;
+        }
+
+        p {
+            font-weight: 500;
+
+        }
+
+    }
+
+    main {
+        width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .card {
+            width: 23%;
+            box-shadow: 0px 0px 15px rgb(218, 217, 217);
+            padding: 30px;
+            text-align: center;
+            color: #474747;
+
+            a {
+                @include mainButton;
+
+                &:hover {
+                    border-color: black;
+                    color: black;
+                }
+            }
+
+            p {
+                margin-bottom: 50px;
+            }
+
+            h1 {
+                font-weight: 400;
+                font-size: 18px ;
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+
+            .card {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+}

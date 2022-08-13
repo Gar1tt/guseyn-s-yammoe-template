@@ -1,0 +1,132 @@
+.row-3 {
+    padding: 50px 0px;
+    background: url(../../img/background-02.jpg) no-repeat center;
+    background-size: cover;
+
+    section {
+        width: 91%;
+        margin: auto;
+        background: white;
+        padding: 30px;
+        border-radius: 20px 0px;
+
+        header {
+            text-align: center;
+            color: $fontColor;
+
+            h6 {
+                font-weight: 400;
+                font-size: 14px;
+                margin-bottom: 5px;
+            }
+
+            h3 {
+                font-weight: 700;
+                font-size: 30px;
+                font-family: 'Times New Roman', Times, serif;
+                margin-top: 0;
+
+            }
+        }
+
+        main {
+            display: flex;
+
+            .main-left {
+                width: 50%;
+
+                ul {
+                    list-style: none;
+                    padding: 0;
+
+                    li {
+                        display: flex;
+
+                        .icon {
+                            width: 15%;
+
+                            span {
+                                display: inline-block;
+                                padding: 22px 25px;
+                                border-radius: 50%;
+                                background: rgba(130, 139, 244, .1);
+                                color: $mainColor;
+                                transition: 1s;
+                            }
+                        }
+
+                        &:hover {
+                            span {
+                                background: $mainColor;
+                                color: white;
+                            }
+                        }
+
+                        .description {
+                            width: 85%;
+
+                            h4 {
+                                margin: 0;
+                                font-weight: 400;
+                                font-size: 20px;
+                                font-family: 'Times New Roman', Times, serif;
+                            }
+
+                            p {
+                                margin-top: 5px;
+                            }
+
+                        }
+
+                        @media (max-width: 992px) {
+                            flex-direction: column;
+                            display: flex;
+
+                            h4{
+                                font-size: 30px;
+                            }
+
+                            p {
+                                text-align: left;
+                                font-weight: 400;
+                                font-size: 15px;
+                                color: #A8A8A8;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .main-right {
+                width: 50%;
+
+                .image-container {
+                    padding: 10px;
+                    border: 1px solid rgb(211, 211, 211);
+                    @include plusContainer;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            @media (max-width: 992px) {
+                flex-direction: column;
+                
+                
+
+                .main-left,
+                .main-right {
+                    width: 100%;
+                }
+
+                .main-left {
+                    text-align: left;
+                    margin-bottom: 20px;
+
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,110 @@
+.row-5 {
+    background: url(../../img/background-03.jpg) no-repeat center;
+    background-size: cover;
+
+    .cover {
+        background: rgba(7, 7, 7, 0.322);
+        padding: 100px 0px;
+    }
+
+    header {
+        text-align: center;
+        color: #fff;
+        margin-bottom: 70px;
+
+        h2 {
+            margin: 0;
+        }
+
+        h6 {
+            margin: 0;
+            font-weight: 400;
+        }
+    }
+
+    main {
+        width: 80%;
+        margin: auto;
+        display: flex;
+        gap: 50px;
+
+        .main {
+            width: 50%;
+
+            .main-header {
+                display: flex;
+
+                .main-header-img {
+                    width: 30%;
+
+                    img {
+                        border-radius: 50%;
+                        width: 100%;
+                    }
+                }
+
+                .main-header-text {
+                    padding: 40px 30px;
+
+                    h3 {
+                        margin: 0;
+                        color: #fff;
+                    }
+
+                    h6 {
+                        margin: 0;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .main-text {
+                background: #fff;
+                padding: 20px 25px;
+                border-radius: 40px 0px;
+                text-align: center;
+                width: 100%;
+
+                p {
+                    margin: 0;
+                    font-family: Verdana, Geneva, Tahoma, sans-serif;
+                    font-size: 15px;
+                }
+            }
+
+        }
+
+        @media (max-width: 992px) {
+            flex-direction: column;
+            width: 100%;
+            align-items: center;
+            display: flex;
+
+
+            .main {
+                flex-direction: column;
+                align-items: center;
+                width: 90%;
+
+                .main-header {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .main-header-text {
+                        padding: 20px 0px;
+
+                        h3,
+                        h6 {
+                            text-align: center;
+                        }
+                    }
+
+                    .main-text {
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}

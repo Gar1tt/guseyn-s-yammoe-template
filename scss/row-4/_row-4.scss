@@ -1,0 +1,55 @@
+.row-4 {
+    background: #F4F4F4;
+    padding: 50px 0px ;
+    header {
+        text-align: center;
+        color: $fontColor;
+        padding: 50px 0px;
+    }
+
+    main{
+        width: 85%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        .card{    
+            text-align: center;
+            width: 23%;
+            background: #fff;
+            color: #474747;
+            border: 1px solid #bebdbd;
+
+            img{
+                width: 100%;
+            }
+
+            h4{
+                font-size: 26px;
+                margin: 0;
+            }
+
+            h6{
+                margin: 0;
+            }
+
+            .card-body{
+                padding: 20px;
+            }
+            .image-container{
+                @include plusContainer;
+                
+            }
+        }
+        
+        @media (max-width: 992px) {
+            flex-direction: column;
+
+            .card {
+                text-align: center;
+                width: 100%;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
